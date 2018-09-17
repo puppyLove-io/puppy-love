@@ -19,7 +19,7 @@ module.exports = (passport, app, User) => {
        User.findById(req.user._id).then((user) => {
          user.admin = true;
          user.save().then(() => {
-           res.redirect('/dashboard');
+           res.redirect('/finish-registration');
          });
        })
      }

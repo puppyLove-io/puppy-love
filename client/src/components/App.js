@@ -11,6 +11,7 @@ import './styles.css';
 import Header from './Header';
 import Landing from './landing/Landing';
 import Dashboard from './dashboard/Dashboard';
+import Registration from './dashboard/Registration';
 
 
 class App extends Component {
@@ -32,6 +33,7 @@ class App extends Component {
               </div>
               <Route exact path="/" component={Landing} />
               <Route exact path="/dashboard" component={Dashboard} />
+              <Route exact path="/finish-registration" component={Registration} />
             </div>
         </BrowserRouter>
     );
