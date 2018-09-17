@@ -38,6 +38,19 @@ module.exports = (passport, app, User) => {
       res.send(req.user);
   })
 
+  // Finish User Account
+  app.post('/api/user/new', reqLogin, (req, res) => {
+    User.findById(req.user._id).then((user) => {
+      user.firstName = req.body.firstName;
+      user.lastName = req.body.lastName;
+      user.username = req.body.username;
+      user.location.adress = req.body.location;
+      user.save().then(() => {
+        res.redirect('/dashboard');
+      })
+    })
+  })
+
 
 
 }

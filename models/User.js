@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
+reqLogin = require('../middleware/requireLogin');
 
 const userSchema = new Schema({
   username: String,

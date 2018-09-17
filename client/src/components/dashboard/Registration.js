@@ -9,12 +9,12 @@ class Registration extends Component {
     return (
       <div className="register-page">
         <h2>Finish registration</h2>
-        <form action="/api/register" method="POST" className="register">
+        <form action="/api/user/new" method="POST" className="register">
           <input name="username" placeholder="username" />
-          <input name="firt-name" placeholder="first name" />
-          <input name="last-name" placeholder="last name" />
+          <input name="firtName" placeholder="first name" />
+          <input name="lastName" placeholder="last name" />
           <input name="location" placeholder="location" />
-          <Link to="/dashboard"><input type="submit" /></Link>
+          <input type="submit" />
         </form>
       </div>
     )
